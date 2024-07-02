@@ -9,7 +9,7 @@ const ForgetPassword = () => {
 
   const handleSubmit =  (e) => {
     e.preventDefault();
-     axios.post('https://password-server-7jsh.onrender.com/forgot-password', { email })
+     axios.post(`${process.env.REACT_APP_API_URL}/forgot-password`, { email })
      .then(res => {
      console.log(res.data)
      }).catch(err => console.log(err))

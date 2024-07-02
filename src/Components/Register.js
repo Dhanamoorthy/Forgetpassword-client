@@ -19,7 +19,7 @@ const Register = () => {
         return;
       }
       try {
-        await axios.post('https://password-server-7jsh.onrender.com/register', { email, password });
+        await axios.post(`${process.env.REACT_APP_API_URL}/register`, { email, password });
         // Handle registration success
         navigate('/login');
       } catch (error) {
